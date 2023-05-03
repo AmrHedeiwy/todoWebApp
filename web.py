@@ -7,9 +7,10 @@ def add_todo():
     new_todo = st.session_state['new_todo'] + '\n'
     todos.append(new_todo)
     func.write_todo(todos)
+    st.session_state['new_todo'] = ''
 
 st.title('My Todo App')
-st.subheader('This is m todo app.')
+st.subheader('This is my todo app.')
 st.write('This app is to increase your productivity.')
 
 for index, todo in enumerate(todos):
